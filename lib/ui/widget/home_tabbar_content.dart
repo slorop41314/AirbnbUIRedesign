@@ -20,9 +20,6 @@ class HomeTabBarContent extends StatefulWidget {
 }
 
 class _HomeTabBarContentState extends State<HomeTabBarContent> {
-  final tokyoData = "ini data tokyo";
-  final seoulData = "ini data seoul";
-
   List<Hotel> _data = [];
 
   @override
@@ -50,7 +47,7 @@ class _HomeTabBarContentState extends State<HomeTabBarContent> {
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
-      itemCount: _data.length,
+      itemCount: _data.length > 4 ? 4 : _data.length,
       itemBuilder: (context, index) {
         Hotel item = _data[index];
         return InkWell(
@@ -64,7 +61,7 @@ class _HomeTabBarContentState extends State<HomeTabBarContent> {
                 CachedNetworkImage(
                   fit: BoxFit.fill,
                   height: 170,
-                  imageUrl: item.imageUrl[index],
+                  imageUrl: item.imageUrl[0],
                   placeholder: (context, url) => Center(
                     child: LoadingIndicator(),
                   ),
@@ -92,23 +89,16 @@ class _HomeTabBarContentState extends State<HomeTabBarContent> {
                   formatNumberToCurrency(item.price.toDouble()),
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
-                RatingBar(
-                  initialRating: 0,
-                  unratedColor: Colors.grey[100],
-                  minRating: 0,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemSize: 12,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                  itemBuilder: (context, _) => Icon(
+                RatingBarIndicator(
+                  rating: item.rating,
+                  itemBuilder: (context, index) => Icon(
                     Icons.star,
-                    color: Colors.grey[800],
+                    color: Colors.grey[700],
                   ),
-                  ignoreGestures: true,
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
+                  unratedColor: Colors.grey[700].withAlpha(40),
+                  itemCount: 5,
+                  itemSize: 10.0,
+                  direction: Axis.horizontal,
                 ),
               ],
             ),

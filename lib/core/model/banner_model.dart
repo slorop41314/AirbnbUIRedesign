@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Hotel {
+class BannerModel {
   String name;
-  List<String> imageUrl;
-  int price;
-  double rating;
+  String imageUrl;
+  int averagePrice;
+  String description;
   // String convertedPrice;
 
-  Hotel({
+  BannerModel({
     @required this.name,
     @required this.imageUrl,
-    @required this.price,
-    this.rating = 0,
+    @required this.averagePrice,
+    this.description,
     // this.convertedPrice = formatNumberToCurrency(this.price.toDouble());
   });
 }

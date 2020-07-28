@@ -51,6 +51,7 @@ ThemeData appTheme() {
       button: TextStyle(
         fontSize: 14,
         color: Colors.white,
+        fontWeight: FontWeight.w700,
       ),
     ),
     dividerTheme: DividerThemeData(

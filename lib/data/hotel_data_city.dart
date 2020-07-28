@@ -3,6 +3,7 @@ import 'package:NitipBeli/core/model/hotel_model.dart';
 final hotelData = {
   "beijing": [
     Hotel(
+      rating: 3.0,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -12,6 +13,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 2.0,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -20,17 +22,29 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
-      name: "Beijing hotel 1",
+      rating: 1,
+      name: "Beijing hotel 3",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
         "https://a0.muscache.com/im/pictures/c23d9d6b-a7dd-4d70-aa36-f483306f4dd8.jpg?im_w=720",
         "https://a0.muscache.com/im/pictures/ada56aed-06e2-4db2-aeec-32a779845f05.jpg?im_w=720",
       ],
-      price: 50000,
+      price: 500000,
+    ),
+    Hotel(
+      rating: 1,
+      name: "Beijing hotel 3",
+      imageUrl: [
+        "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/c23d9d6b-a7dd-4d70-aa36-f483306f4dd8.jpg?im_w=720",
+        "https://a0.muscache.com/im/pictures/ada56aed-06e2-4db2-aeec-32a779845f05.jpg?im_w=720",
+      ],
+      price: 500000,
     ),
   ],
   "tokyo": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -40,6 +54,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -48,6 +63,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -59,6 +75,7 @@ final hotelData = {
   ],
   "seoul": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -68,6 +85,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -76,6 +94,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -87,6 +106,7 @@ final hotelData = {
   ],
   "london": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -96,6 +116,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -104,6 +125,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -115,6 +137,7 @@ final hotelData = {
   ],
   "newyork": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -124,6 +147,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -132,6 +156,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -143,6 +168,7 @@ final hotelData = {
   ],
   "bali": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -152,6 +178,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -160,6 +187,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -171,6 +199,7 @@ final hotelData = {
   ],
   "dubai": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -180,6 +209,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -188,6 +218,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -199,6 +230,7 @@ final hotelData = {
   ],
   "dumai": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -208,6 +240,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -216,6 +249,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -227,6 +261,7 @@ final hotelData = {
   ],
   "hongkong": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -236,6 +271,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -244,6 +280,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
@@ -255,6 +292,7 @@ final hotelData = {
   ],
   "phuket": [
     Hotel(
+      rating: 3,
       name: "Downtown Artistic Service Apartment",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/043f2fa2-f589-4b01-a827-adbfdc067795.jpg?im_w=1200",
@@ -264,6 +302,7 @@ final hotelData = {
       price: 170000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 2",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/e94e057f-34e8-4120-8213-d4a97c3a8acc.jpg?im_w=1200",
@@ -272,6 +311,7 @@ final hotelData = {
       price: 380000,
     ),
     Hotel(
+      rating: 3,
       name: "Beijing hotel 1",
       imageUrl: [
         "https://a0.muscache.com/im/pictures/6a05f954-f1ee-4513-80d1-ab4fc26b04d5.jpg?im_w=1200",
