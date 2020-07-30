@@ -1,6 +1,7 @@
 import 'package:NitipBeli/core/service/localdata_service.dart';
 import 'package:NitipBeli/ui/metrics.dart';
 import 'package:NitipBeli/ui/shared/button/primary_button.dart';
+import 'package:NitipBeli/ui/view/bottom_nav_bar.dart';
 import 'package:NitipBeli/ui/view/home_screen.dart';
 import 'package:NitipBeli/utils/image_path.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Saving data here
     LocalService.shared.changeUserLoginStatus(true);
     // Navigation
-    Navigator.of(context).pushReplacementNamed(HomeScreen.route_name);
+    Navigator.of(context).pushReplacementNamed(BottomTabNav.route_name);
   }
 
   @override

@@ -2,6 +2,7 @@ import 'package:NitipBeli/core/model/hotel_model.dart';
 import 'package:NitipBeli/data/hotel_data_city.dart';
 import 'package:NitipBeli/ui/shared/bullet/dot_spacer.dart';
 import 'package:NitipBeli/ui/shared/loading/loading_indicator.dart';
+import 'package:NitipBeli/ui/view/room_detail.dart';
 import 'package:NitipBeli/utils/helper.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,14 @@ class _HomeTabBarContentState extends State<HomeTabBarContent> {
         Hotel item = _data[index];
         return InkWell(
           onTap: () {
-            print(item.name);
+            Navigator.pushNamed(
+              context,
+              RoomDetail.route_name,
+              arguments: {
+                "data": item,
+                "category": widget.category,
+              },
+            );
           },
           child: Container(
             child: Column(

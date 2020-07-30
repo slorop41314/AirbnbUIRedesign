@@ -2,6 +2,7 @@ import 'package:NitipBeli/ui/theme.dart';
 import 'package:NitipBeli/ui/view/bottom_nav_bar.dart';
 import 'package:NitipBeli/ui/view/login_screen.dart';
 import 'package:NitipBeli/ui/view/onboarding_screen.dart';
+import 'package:NitipBeli/ui/view/room_detail.dart';
 import 'package:NitipBeli/ui/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
 
         // Auth Screen
         BottomTabNav.route_name: (context) => BottomTabNav(),
+        RoomDetail.route_name: (context) => RoomDetail(),
       },
     );
   }
