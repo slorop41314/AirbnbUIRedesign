@@ -1,10 +1,8 @@
 import 'package:NitipBeli/core/model/hotel_model.dart';
 import 'package:NitipBeli/ui/metrics.dart';
-import 'package:NitipBeli/ui/shared/button/primary_button.dart';
 import 'package:NitipBeli/ui/shared/image/image_slider.dart';
-import 'package:NitipBeli/utils/helper.dart';
+import 'package:NitipBeli/ui/widget/room_detail_actions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class RoomDetail extends StatefulWidget {
   static const route_name = "RoomDetail";
@@ -54,7 +52,6 @@ class _RoomDetailState extends State<RoomDetail> {
   Widget build(BuildContext context) {
     final Map args = ModalRoute.of(context).settings.arguments as Map;
     final Hotel data = args["data"];
-    final String category = args["category"];
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -181,93 +178,8 @@ class _RoomDetailState extends State<RoomDetail> {
             ),
             Container(
               padding: padding_child,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            formatNumberToCurrency(
-                              data.price.toDouble(),
-                            ),
-                            style: Theme.of(context).textTheme.bodyText2,
-                          ),
-                          Text(" / Night")
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          RatingBarIndicator(
-                            rating: data.rating,
-                            itemBuilder: (context, index) => Icon(
-                              Icons.star,
-                              color: Colors.grey[700],
-                            ),
-                            unratedColor: Colors.grey[700].withAlpha(40),
-                            itemCount: 5,
-                            itemSize: 10.0,
-                            direction: Axis.horizontal,
-                          ),
-                          SizedBox(
-                            width: content_small_margin,
-                          ),
-                          Text(
-                            data.rating.toString(),
-                            style: Theme.of(context).textTheme.subtitle2,
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 150,
-                    // height: ,
-                    child: PrimaryButton(
-                      buttonTitle: "ADD DATES",
-                      onTap: () {
-                        print("Ontap add dates");
-                      },
-                    ),
-                  )
-                ],
-              ),
+              child: RoomDetailActions(data: data),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ProductDetailActionCard extends StatelessWidget {
-  const ProductDetailActionCard({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      child: Container(
-        height: 50,
-        width: double.infinity,
-        child: Row(
-          children: <Widget>[
-            SizedBox(
-              width: 10,
-            ),
-            // Expanded(
-            //   child: SecondaryButton(
-            //     label: "+ Keranjang",
-            //     onTap: () {
-            //       print("Beli keranjang");
-            //     },
-            //   ),
-            // )
           ],
         ),
       ),

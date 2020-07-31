@@ -1,4 +1,3 @@
-import 'package:NitipBeli/ui/view/explore_screen.dart';
 import 'package:NitipBeli/ui/view/favorite_screen.dart';
 import 'package:NitipBeli/ui/view/home_screen.dart';
 import 'package:NitipBeli/ui/view/profile_screen.dart';
@@ -16,7 +15,6 @@ class _BottomTabNavState extends State<BottomTabNav> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = [
     HomeScreen(),
-    ExploreScreen(),
     FavoriteScreen(),
     ProfileScreen(),
   ];
@@ -44,12 +42,6 @@ class _BottomTabNavState extends State<BottomTabNav> {
               Icons.home,
             ),
             title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-            ),
-            title: Text('Explore'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
