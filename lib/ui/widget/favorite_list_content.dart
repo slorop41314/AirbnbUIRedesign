@@ -3,6 +3,7 @@ import 'package:NitipBeli/ui/metrics.dart';
 import 'package:NitipBeli/ui/shared/bullet/dot_spacer.dart';
 import 'package:NitipBeli/ui/shared/image/image.dart';
 import 'package:flutter/material.dart';
+import 'package:NitipBeli/ui/view/room_detail.dart';
 
 class FavoriteListContent extends StatelessWidget {
   const FavoriteListContent({
@@ -59,28 +60,39 @@ class FavoriteListContent extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   final item = _data["data"][index] as Hotel;
-                  return Container(
-                    margin: EdgeInsets.only(left: 20),
-                    height: 200,
-                    width: 200,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SizedBox(
-                          height: 130,
-                          child: CustomImage(
-                            url: item.imageUrl[0],
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RoomDetail.route_name,
+                        arguments: {
+                          "data": item,
+                        },
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(left: 20),
+                      height: 200,
+                      width: 200,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 130,
+                            child: CustomImage(
+                              url: item.imageUrl[0],
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Room",
-                          style: Theme.of(context).textTheme.subtitle2,
-                        ),
-                        Text(
-                          item.name,
-                          maxLines: 2,
-                        ),
-                      ],
+                          Text(
+                            "Room",
+                            style: Theme.of(context).textTheme.subtitle2,
+                          ),
+                          Text(
+                            item.name,
+                            maxLines: 2,
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 }),
