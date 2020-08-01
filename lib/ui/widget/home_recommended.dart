@@ -53,7 +53,7 @@ class RecommendedHomeWidget extends StatelessWidget {
                       formatNumberToCurrency(
                         item.averagePrice.toDouble(),
                       ),
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.subtitle2,
                     ),
                   ],
                 ),

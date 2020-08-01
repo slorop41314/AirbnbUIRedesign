@@ -74,7 +74,7 @@ class FavoriteListContent extends StatelessWidget {
                         ),
                         Text(
                           "Room",
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                         Text(
                           item.name,

@@ -220,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen>
                             ),
                             Text(
                               "Find a top rated home that you need",
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: Theme.of(context).textTheme.subtitle2,
                             ),
                           ],
                         ),

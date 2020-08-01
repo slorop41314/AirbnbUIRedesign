@@ -17,13 +17,8 @@ ThemeData appTheme() {
     textTheme: TextTheme(
       bodyText2: TextStyle(
         fontSize: 14,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
-      ),
-      subtitle1: TextStyle(
-        fontSize: 12,
-        fontWeight: FontWeight.w700,
-        color: Colors.grey[600],
       ),
       subtitle2: TextStyle(
         fontSize: 10,

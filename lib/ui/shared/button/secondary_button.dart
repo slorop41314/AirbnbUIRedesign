@@ -1,12 +1,16 @@
 import 'package:NitipBeli/ui/metrics.dart';
-import 'package:NitipBeli/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class SecondaryButton extends StatelessWidget {
   final String buttonTitle;
   final Function onTap;
+  final Color buttonColor;
 
-  SecondaryButton({@required this.buttonTitle, @required this.onTap});
+  SecondaryButton({
+    @required this.buttonTitle,
+    @required this.onTap,
+    this.buttonColor = Colors.green,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class SecondaryButton extends StatelessWidget {
           ),
         ),
         borderSide: BorderSide(
-          color: kColorSecondary,
+          color: this.buttonColor,
           width: 1,
         ),
         onPressed: this.onTap,
@@ -30,7 +34,7 @@ class SecondaryButton extends StatelessWidget {
           child: Text(
             this.buttonTitle,
             style: Theme.of(context).textTheme.button.copyWith(
-                  color: kColorSecondary,
+                  color: this.buttonColor,
                 ),
             textAlign: TextAlign.center,
           ),

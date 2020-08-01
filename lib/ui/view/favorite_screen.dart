@@ -1,7 +1,5 @@
-import 'package:NitipBeli/core/model/hotel_model.dart';
 import 'package:NitipBeli/data/hotel_data_city.dart';
 import 'package:NitipBeli/ui/metrics.dart';
-import 'package:NitipBeli/ui/shared/bullet/dot_spacer.dart';
 import 'package:NitipBeli/ui/shared/image/image.dart';
 import 'package:NitipBeli/ui/widget/favorite_list_content.dart';
 import 'package:flutter/material.dart';

@@ -95,7 +95,7 @@ class _HomeTabBarContentState extends State<HomeTabBarContent> {
                 ),
                 Text(
                   formatNumberToCurrency(item.price.toDouble()),
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.subtitle2,
                 ),
                 RatingBarIndicator(
                   rating: item.rating,
